@@ -17,7 +17,7 @@ def open_file():
 	)
 	if not filepath:
 		return
-	txt_edit.delete(1.0, END)
+	txt_edit.delete(1.0, END) #to clear the contents of a Text widget
 	# if a file is opened then display the contents of the file
 	with open(filepath, "r") as input_file:
 		# Read contents of the input file
@@ -32,7 +32,7 @@ def save_file():
     # Save the current file as a new file
     filepath = asksaveasfilename(
         defaultextension="txt",
-        filetypes=[("Text Files", "*.txt"), ("All Files", "*.*")],
+        filetypes=[("Text Files", "*.txt"), ("All Files", "*.*"),('Python files',"*.py")]
     )
     if not filepath:
         return
